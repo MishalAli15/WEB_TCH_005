@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exam</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="labmid.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+<!--    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">-->
+</head>
+<body>
+
+<header>
+    <nav class=" bg-red-50 relative flex w-full items-center justify-between py-2 text-neutral-600 shadow-lg hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600 dark:text-neutral-200 md:flex-wrap md:justify-start"
+            data-te-navbar-ref>
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <div class="flex items-center">
+                <!-- Hamburger menu button -->
+                <button
+                        class="border-0 bg-transparent px-2 text-xl leading-none transition-shadow duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 dark:hover:text-orange dark:focus:text-white lg:hidden"
+                        type="button"
+                        data-te-collapse-init
+                        data-te-target="#navbarSupportedContentY"
+                        aria-controls="navbarSupportedContentY"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <!-- Hamburger menu icon -->
+                    <span class="[&>svg]:w-5">
+            <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="h-7 w-7">
+              <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </span>
+                </button>
+            </div>
+
+            <!-- Navigation links -->
+            <div
+                    class="!visible hidden grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                    id="navbarSupportedContentY"
+                    data-te-collapse-item>
+                <ul
+                        class="mr-auto flex flex-col lg:flex-row"
+                        data-te-navbar-nav-ref>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a
+                                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                                href="#!"
+                                data-te-nav-link-ref
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                        >SUSTAINABILTY</a>
+                    </li>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a
+                                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                                href="#!"
+                                data-te-nav-link-ref
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                        >PRESS CENTER</a
+                        >
+                    </li>
+                    <li class="mb-4 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a
+                                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                                href="#!"
+                                data-te-nav-link-ref
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                        >AWARDS</a
+                        >
+                    </li>
+                    <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a
+                                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                                href="#!"
+                                data-te-nav-link-ref
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                        >TRAVEL AGENTS</a
+                        >
+                    </li>
+
+                    <li class="mb-2 lg:mb-0 lg:pr-2" data-te-nav-item-ref>
+                        <a
+                                class="block transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:hover:text-white dark:focus:text-white lg:p-2 [&.active]:text-black/90"
+                                href="#!"
+                                data-te-nav-link-ref
+                                data-te-ripple-init
+                                data-te-ripple-color="light"
+                        >CONTACT US / E-CONCIERGE</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+<nav class="bg-orange-50 shadow-sm h-32">
+    <div class="max-w-7xl  sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+            <div class="flex items-center">
+                <a href="#">
+                    <img id="logo" class="h-20 pt-5" src="serena-hotel-colored-logo.svg" alt="Serena Hotels">
+                </a>
+            </div>
+            <div class="hidden sm:block sm:ml-6 p-10 flex md:space-x-8">
+                <div class="flex space-x-4 ">
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Home</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Rooms & Suites</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Dining</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Events</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Spa & Fitness</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Offers</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">About Us</a>
+                    <a href="#" class="text-gray-800 hover:text-orange-500 text-xl px-3 py-2 rounded-sm  font-medium border-l-2 border-orange-500">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<article x-data="slider" class="relative w-full flex flex-shrink-0 overflow-hidden shadow-2xl">
+    <div class="rounded-full bg-gray-600 text-white absolute top-5 right-5 text-sm px-2 text-center z-10">
+        <span x-text="currentIndex"></span>/
+        <span x-text="images.length"></span>
+    </div>
+
+    <template x-for="(image, index) in images">
+        <figure class="h-96" x-show="currentIndex == index + 1" x-transition:enter="transition transform duration-300"
+                x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+                x-transition:leave="transition transform duration-300" x-transition:leave-start="opacity-100"
+                x-transition:leave-end="opacity-0">
+            <img :src="image" alt="Image" class="absolute inset-0 z-10 h-full w-full object-cover opacity-70" />
+            <figcaption class="absolute inset-x-0 bottom-1 z-20 w-96 mx-auto p-4 font-light text-sm text-center tracking-widest leading-snug bg-gray-300 bg-opacity-25">
+               YOUR JOURNEY BEGINS HERE(FIND YOUR HOTEL!)
+            </figcaption>
+        </figure>
+    </template>
+
+
+    <button @click="back()"
+            class="absolute left-14 top-1/2 -translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:-translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7">
+            </path>
+        </svg>
+    </button>
+
+    <button @click="next()"
+            class="absolute right-14 top-1/2 translate-y-1/2 w-11 h-11 flex justify-center items-center rounded-full shadow-md z-10 bg-gray-100 hover:bg-gray-200">
+        <svg class=" w-8 h-8 font-bold transition duration-500 ease-in-out transform motion-reduce:transform-none text-gray-500 hover:text-gray-600 hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+             xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+        </svg>
+    </button>
+</article>
+
+<div class="flex">
+    <div class="w-1/2">
+        <!-- Left div -->
+        <img src="photo-1584132967334-10e028bd69f7.jpg" class="h-full w-full object-cover" alt="Your photo">
+    </div>
+    <div class="w-1/2 flex flex-col justify-center items-center px-6">
+        <!-- Right div -->
+        <h1 class="w-1/2 text-5xl font-extrabold text-gray-900 mb-6 leading-tight tracking-tight">SERENA HOTELS & RESORTS</h1>
+        <p class="text-orange-600  mt-4 text-4xl font-medium">Experience the finest hospitality in the world.</p>
+        <p class="text-orange-600 mt-4 font-medium text-2xl ">Unique safari lodges, camps and forts.</p>
+    </div>
+</div>
+
+
+
+
+<h1 class="w-1/2 text-5xl font-extrabold text-gray-900  leading-tight tracking-tight flex justify-center items-center">SAFARI</h1>
+<div class="flex flex-wrap justify-center">
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img class="w-full" src="https://source.unsplash.com/featured/500x300/?safari" alt="Safari">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Safari in Tanzania</div>
+            <p class="text-gray-700 text-base">
+                Explore the beauty of Tanzania's wildlife on a once-in-a-lifetime safari experience. Witness lions, elephants, and giraffes in their natural habitat.
+            </p>
+        </div>
+    </div>
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img class="w-full" src="https://source.unsplash.com/featured/500x300/?safari-animals" alt="Safari Animals">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Safari in Kenya</div>
+            <p class="text-gray-700 text-base">
+                Get up close and personal with the Big Five on a safari adventure in Kenya. Spot majestic elephants, lions, leopards, rhinos, and buffalo in their natural habitat.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="max-w-sm rounded overflow-hidden shadow-lg m-4">
+        <img class="w-full" src="https://source.unsplash.com/featured/500x300/?safari-jeep" alt="Safari Jeep">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Safari in South Africa</div>
+            <p class="text-gray-700 text-base">
+                Take a guided safari tour in South Africa and witness the beauty of the African savannah. Travel in a comfortable 4x4 jeep and spot lions, rhinos, zebras, and more.
+            </p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</body>
+</html>
