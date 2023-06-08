@@ -1,0 +1,35 @@
+GET http://localhost:3000/roles
+
+####
+GET http://localhost:3000/roles/6481b26b16dcc222696dba9e
+
+####
+
+PUT http://localhost:3000/roles
+Content-Type: application/json
+
+{
+  "title": "role 3",
+  "permissions": ["delete"],
+  "description": "role 2 description"
+}
+
+
+####
+
+POST http://localhost:3000/roles
+Content-Type: application/json
+
+{
+"title": "Role 5",
+"permissions": ["write","delete"],
+"description": "role 5 description"
+}
+
+####
+DELETE http://localhost:3000/roles/7
+
+
+
+
+
