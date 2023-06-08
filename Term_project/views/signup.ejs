@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Sign up in voice up</title>
+</head>
+<body>
+<%- include('partials/header') %>
+<!-- Sign Up Form -->
+<div class="container mx-auto p-8">
+    <div class="max-w-md mx-auto bg-blue-300 p-8 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold mb-4">Sign Up</h2>
+        <form action="/signup" method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="username">Username</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="username" name="username" type="text" placeholder="Enter your username" required>
+            </div>
+
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">Email</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="email" name="email" type="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="password">Password</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="password" name="password" type="password" placeholder="Enter your password" required>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="country">Country</label>
+                <div class="relative">
+                    <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="country" name="country" required>
+                        <option>Pakistan</option>
+                        <option>Canada</option>
+                        <option>Mexico</option>
+                        <option>USA</option>
+                        <option>India</option>
+                        <option>Spain</option>
+                        <option>UAE</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path d="M10 12l-6-6h12z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="motivation">Motivation</label>
+                <textarea
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="motivation" name="motivation" rows="5" placeholder="Why do you want to sign up?"
+                        required></textarea>
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+</body>
+</html>

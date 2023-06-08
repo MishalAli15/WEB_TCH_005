@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>Voice Up (a peitition website) </title>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com/css/tailwind.min.css">
 </head>
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400&family=Oswald:wght@400;500;700&display=swap');
@@ -22,13 +24,13 @@
 <body>
 <div class="flex justify-center items-centre  ">
 
-    <div class="bg-gradient-to-r from-lime-500 to-blue-600 rounded-sm w-full">
+    <div class="bg-gradient-to-r from-blue-300 to-blue-500 rounded-sm w-full">
 
 
         <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900 shadow-xl">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
                 <a class="flex items-center">
-                    <img src="audio.png" class="h-6 mr-3 sm:h-9" alt="VU Logo"/>
+                    <img src="../src/images/audio.png" class="h-6 mr-3 sm:h-9" alt="VU Logo"/>
                     <span style=""
                           class="  self-center text-2xl text-white font-bold whitespace-nowrap dark:text-white">VoiceUp</span>
 
@@ -96,7 +98,7 @@
 
 
                     <li class="pl-64">
-                        <a href="signin.html" id="signin-btn"
+                        <a href="signin.ejs" id="signin-btn"
                            class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-gray-100 rounded-xl group">
     <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-gradient-to-b  rounded group-hover:-mr-4 group-hover:-mt-4">
       <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
@@ -108,13 +110,15 @@
 
 
                     <li class="">
-                        <a href="signup.html" id="signup-btn"
-                           class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium transition-all bg-gray-100 rounded-xl group">
-    <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-gradient-to-b  rounded group-hover:-mr-4 group-hover:-mt-4">
+                        <%- include('signup.ejs') %>
+
+                        class="relative inline-flex items-center justify-start px-6 py-3 overflow-hidden font-medium
+                        transition-all bg-gray-100 rounded-xl group">
+                        <span class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-gradient-to-b  rounded group-hover:-mr-4 group-hover:-mt-4">
       <span class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
     </span>
-                            <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-gradient-to-br from-green-400 to-blue-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
-                            <span class="relative w-full text-left text-blue-900 transition-colors duration-200 ease-in-out group-hover:text-white">SIGN UP</span>
+                        <span class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full translate-y-full bg-gradient-to-br from-green-400 to-blue-600 rounded-2xl group-hover:mb-12 group-hover:translate-x-0"></span>
+                        <span class="relative w-full text-left text-blue-900 transition-colors duration-200 ease-in-out group-hover:text-white">SIGN UP</span>
                         </a>
                     </li>
 
@@ -131,7 +135,7 @@
 </div>
 
 <section class="relative world">
-    <img class="h-80 w-full object-cover opacity-10" src="world.jpg" alt="world">
+    <img class="h-80 w-full object-cover opacity-10" src="../src/images/world.jpg" alt="world">
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
         <h1 class="text-3xl text-black " style="font-weight:bolder">
             We have the ability to create a world where everyone can feel valued and included.
@@ -159,12 +163,13 @@
 
 </section>
 
+
 <!--    peitiotions-->
 <div class="p-4">
     <div class=" max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div class="md:flex">
             <div class="md:flex-shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="zavi.jpg"
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src="../src/images/zavi.jpg"
                      alt="Success Story Image">
             </div>
 
@@ -178,7 +183,7 @@
                     artifacts that have been stolen from Egypt. His intention has never been to bring back
                     legitimately-acquired</p>
                 <div class="mt-4 flex items-center">
-                    <img class="w-10 h-10 rounded-full mr-4" src="zahi.jpg" alt="Supporter Image">
+                    <img class="w-10 h-10 rounded-full mr-4" src="../src/images/zahi.jpg" alt="Supporter Image">
                     <div class="text-sm text-gray-900">Dr Zahi Hawas</div>
                     <div class="text-sm text-gray-500 ml-auto">
                         <span class="font-bold">500</span> supporters
@@ -197,7 +202,7 @@
     <div class=" max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div class="md:flex">
             <div class="md:flex-shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="child.jpg"
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src="../src/images/child.jpg"
                      alt="Success Story Image">
             </div>
 
@@ -213,7 +218,7 @@
 
                 </p>
                 <div class="mt-4 flex items-center">
-                    <img class="w-10 h-10 rounded-full mr-4" src="sup2.jpg" alt="Supporter Image">
+                    <img class="w-10 h-10 rounded-full mr-4" src="../src/images/sup2.jpg" alt="Supporter Image">
                     <div class="text-sm text-gray-900">Jonathan Bryan</div>
                     <div class="text-sm text-gray-500 ml-auto">
                         <span class="font-bold">2500</span> supporters
@@ -232,7 +237,7 @@
     <div class=" max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl">
         <div class="md:flex">
             <div class="md:flex-shrink-0">
-                <img class="h-48 w-full object-cover md:h-full md:w-48" src="peition3.webp"
+                <img class="h-48 w-full object-cover md:h-full md:w-48" src="../src/images/peition3.webp"
                      alt="Success Story Image">
             </div>
 
@@ -248,7 +253,7 @@
                     slow process, unavailability of INEC officials, inability to register on weekends amongst
                     others.</p>
                 <div class="mt-4 flex items-center">
-                    <img class="w-10 h-10 rounded-full mr-4" src="sup3.svg" alt="Supporter Image">
+                    <img class="w-10 h-10 rounded-full mr-4" src="../src/images/sup3.svg" alt="Supporter Image">
                     <div class="text-sm text-gray-900">'Tunji Alao</div>
                     <div class="text-sm text-gray-500 ml-auto">
                         <span class="font-bold">1525</span> supporters
@@ -263,7 +268,7 @@
 </div>
 
 
-<footer class="bg-gradient-to-r from-lime-500 to-blue-600 rounded-sm text-center text-white">
+<footer class="bg-gradient-to-r from-blue-300 to-blue-500 rounded-sm text-center text-white">
     <div class="container px-6 pt-6">
         <div class="mb-6 flex justify-center">
             <a
