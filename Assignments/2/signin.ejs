@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <title>Sign in to Voice Up</title>
+</head>
+<body>
+<%- include('partials/header') %>
+<!-- Sign In Form -->
+<div class="form-hidden container mx-auto flex p-56">
+    <div class="max-w-lg mx-auto bg-blue-300 rounded-lg shadow-md">
+        <div class="text-center font-bold text-xl p-4 border-b">Sign In</div>
+        <form class="p-4" id="signin-form" action="/signin" method="POST">
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="email">
+                    Email
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="email" type="text" placeholder="Email" name="email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-700 font-bold mb-2" for="password">
+                    Password
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                       id="password" type="password" placeholder="Password" name="password">
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                    Sign In
+                </button>
+                <a class="inline-block align-baseline font-bold text-sm text-black hover:text-white" href="#">
+                    Forgot Password?
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<%- include('partials/footer') %>
+</body>
+</html>
